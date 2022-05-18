@@ -32,6 +32,7 @@ function validaNome(){
     }
 }
 
+/*Essa função irá validar se o email possui o "@" e o "."*/
 function validaEmail(){
     let txtEmail = document.querySelector('#txtEmail')
     if(email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1){
@@ -46,6 +47,7 @@ function validaEmail(){
     
 }
 
+/*Essa função irá validar se o assunto tem até 100 caracteres*/
 function validaAssunto(){
     let txtAssunto = document.querySelector('#txtAssunto')
     if(assunto.value.length>100)
@@ -61,6 +63,7 @@ function validaAssunto(){
     assuntoOk = true
 }
 
+/*Essa função irá validar se todos os campos foram preenchidos corretamente antes de enviar os dados*/
 function enviar(){
     if(nomeOk == true && emailOk == true && assuntoOk == true){
         alert('Seus dados foram enviados com sucesso!!!')
@@ -70,11 +73,13 @@ function enviar(){
     }
 }
 
+/*Essa função faz com que o mapa aumente seu tamanho quando o mouse passar sobre ele*/
 function mapaZoom(){
     mapa.style.width = "800px"
     mapa.style.height = "600px"
 }
 
+/*Essa função faz com que o mapa volte ao seu tamanho normal quando o mouse não estiver mais sobre ele*/
 function mapaNormal(){
     mapa.style.width = "600px"
     mapa.style.height = "450px"
